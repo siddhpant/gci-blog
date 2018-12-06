@@ -1,0 +1,3 @@
+username: String
+profile: String
+organization: Organization

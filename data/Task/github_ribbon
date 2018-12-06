@@ -1,0 +1,18 @@
+---
+task: "Issue #24: Add 'Fork Me On GitHub' ribbons"
+org: coala
+repo: community
+pull_request: "https://github.com/coala/community/pull/225"
+mentors:
+  - andrewda
+  - li-boxuan
+  - jayvdb
+---
+
+In this task I had to add a GitHub fork me ribbon on the statik website. For this I used the django templates already in use in the repo.
+
+I initially did the beginner type of sultion of adding the coala repo link in the ribbon (the ribbon's in seperate template), but was later told to make it "forkable and usable in another org", which meant I had to insert the link dynamically by seeing the repo. 
+
+This task served as an introduction to me about Django and its tag templating system. I've to think about some other ways, of which I tried the `views.py` way, but that file wasn't even called! Then I read and found out about tags and quickly made some changes and pushed.
+
+The PR as of now stands approved.

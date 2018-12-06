@@ -1,0 +1,7 @@
+task: String
+org: Organization
+repo: Repository
+pull_request: String
+submitted_issue: String
+mentors: Mentor[]
+content: Content

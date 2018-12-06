@@ -1,0 +1,14 @@
+---
+task: "coAST: Add datatypes to a language definition"
+org: coala
+repo: coAST
+pull_request: "https://github.com/coala/coAST/pull/46"
+mentors:
+  - jayvdb
+---
+
+In my first explicit task to add datatypes, I added C# datatypes while being consistent with my other PR of C.
+
+Introduced the `precision` field in the datatype model.
+
+Learned not to use GitHub's online conflict solver.

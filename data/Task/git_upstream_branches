@@ -1,0 +1,8 @@
+---
+task: "[Git] Git upstream branches"
+org: score
+repo: scorelab.github.io
+submitted_issue: "https://github.com/siddhpant/gci-blog/blob/master/assets/git-upstream.png"
+---
+
+In this task I had to fetch and merge upstream (using git, of course).

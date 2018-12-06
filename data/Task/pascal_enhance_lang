@@ -1,0 +1,20 @@
+---
+task: "coAST: Enhance a language definition"
+org: coala
+repo: coAST
+pull_request: "https://github.com/coala/coAST/pull/82"
+mentors:
+  - ayan-b
+  - jayvdb
+  - li-boxuan
+  - Man-Jain
+  - Naveenaidu
+---
+
+In this another task about coAST, I added data types for Pascal.
+
+I didn't intend to do this initially and thought about abstracting the repo more, which was suggested earlier in Zulip.
+
+I intially did something else than Pascal data types, from which I added some extra things unrelated to Pascal after recovering them from backup, for which I made an issue for recovered commit and PR.
+
+I lost my data as my Windows PC got berserk. Had to do a clean install.

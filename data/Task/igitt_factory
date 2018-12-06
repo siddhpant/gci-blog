@@ -1,0 +1,19 @@
+---
+task: "igitt: Issue #111: Add factories"
+org: coala
+repo: IGitt
+pull_request: "https://gitlab.com/gitmate/open-source/IGitt/merge_requests/269"
+mentors:
+  - nkprince007
+  - jayvdb
+---
+
+In this high dificulty task, I had to create a factory function for the IGitt project. It took me 8 days.
+
+I initially made very shameless noob mistakes considering which I was told about the task was hard to rescue, and then proceeded to realize it on day 2 and due to academics had to skip day 3.
+
+Then I made the function along with another which would pass tokens (I thought I have to create tokens), but when reviewed I was told a readymade token object would be passed! I had to shorten my code and the resulting factory was good to go.
+
+Next I have to make tests, and the tests were failing. Then the rest of the days I spent writing tests and fixing it along with mentor. One cassette recorded error and it was outputing it again and again (LOL trolled), there are three different independent versions of `giturlparse`, and app ID was invalid.
+
+In the end tests passed and the task was approved.

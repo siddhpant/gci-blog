@@ -1,0 +1,7 @@
+project-name: GCI 2018 Journey
+base-path: /
+context:
+  static:
+    site-title: My GCI 2018 Journey | Siddh Raman Pant
+  dynamic:
+    all-authors: session.query(Author).all()

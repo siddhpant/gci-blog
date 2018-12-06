@@ -1,0 +1,14 @@
+---
+task: "It's moban repo sync time!"
+org: coala
+repo: coala-antlr
+pull_request: "https://gitlab.com/coala/bears/coala-antlr/merge_requests/41"
+mentors:
+  - ayan-b
+  - jayvdb
+  - virresh
+---
+
+In this task I had to sync a coala repo on which tests were failing due to changes in templates in the moban repo.
+
+Used `moban` for the first time.

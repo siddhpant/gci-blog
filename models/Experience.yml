@@ -1,0 +1,5 @@
+competition: String
+year: Integer
+rank: Integer
+tasks_completed: Integer
+result: String
