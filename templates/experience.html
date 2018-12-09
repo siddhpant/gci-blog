@@ -1,10 +1,6 @@
-{% extends "base.html" %}
-
-{% block experience}
-
-  <span class="title">Experience</span>
+<span class="title">Experience</span>
   <span class="hint">
-
+    {% for experience in exp %}
+      {{experience}}
+    {% endfor %}
   </span>
-
-{% endblock}

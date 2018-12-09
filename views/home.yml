@@ -1,0 +1,13 @@
+path: /
+template: base
+context:
+  static:
+    site-title: "My GCI 2018 Journey | Siddh Raman Pant"
+  dynamic:
+    author: session.query(Author).all()
+    chats: session.query(Chatroom).all()
+    exp: session.query(Experience).all()
+    mentors: session.query(Mentor).all()
+    orgs: session.query(Organization).all()
+    repos: session.query(Repository).all()
+    tasks: session.query(Task).all()

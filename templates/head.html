@@ -1,27 +1,21 @@
-{% extends "base.html" %}
+<head>
 
-{% block head}
+  <meta charset="UTF-8">
+  <title>{{ site_title }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 
-  <head>
+  <!--
+  Used theme made by Alberto Hartzet (www.albertohartzet.com)
+  Used under CC BY-NC-SA 4.0, available at (https://codepen.io/hrtzt/pen/NPZKRN).
+  Customized the theme to make site nicer.
+  -->
 
-    <meta charset="UTF-8">
-    <title>{{ site-title }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+  <style>
+    {% include 'style.css' %}
+  </style>
 
-    <!--
-    Used theme made by Alberto Hartzet (www.albertohartzet.com)
-    Used under CC BY-NC-SA 4.0, available at (https://codepen.io/hrtzt/pen/NPZKRN).
-    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-    <style>
-    /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-    {% asset "css/style.css" %}
-    </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-  </head>
-
-{% endblock %}
+</head>

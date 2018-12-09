@@ -2,7 +2,7 @@ project-name: GCI 2018 Journey
 base-path: /
 context:
   static:
-    site-title: "My GCI 2018 Journey | Siddh Raman Pant"
+    site_title: "My GCI 2018 Journey | Siddh Raman Pant"
   dynamic:
     author: session.query(Author).all()
     chats: session.query(Chatroom).all()

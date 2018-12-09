@@ -3,5 +3,5 @@ slug: String
 author: Author
 summary: String
 published: DateTime
-task: Task_page
+task: Task
 content: Content

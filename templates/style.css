@@ -6,13 +6,23 @@ html, body, .page {
   transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
-  -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
+  -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
   color: #fff;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 * {
   font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+}
+
+@font-face {
+  font-family: 'Signika';
+  src:url('assets/fonts/Signika/Signika-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Simplifica';
+  src:url('assets/fonts/SIMPLIFICA/SIMPLIFICA-Typeface.ttf');
 }
 
 .page {
@@ -44,14 +54,14 @@ html, body, .page {
   transition-delay: .4s !important;
 }
 
-#t2:target #p1, 
+#t2:target #p1,
 #t3:target #p1,
 #t4:target #p1,
 #t5:target #p1{
   background: black;
 }
 
-#t2:target #p1 .icon, 
+#t2:target #p1 .icon,
 #t3:target #p1 .icon,
 #t4:target #p1 .icon,
 #t5:target #p1 .icon {
@@ -123,11 +133,13 @@ a {
 }
 
 .title {
-  font-size: 38px;
+  font-family: Signika;
+  font-size: 50px;
 }
 
 .hint {
-  font-size: 13px;
+  font-family: Simplifica;
+  font-size: 30px;
 }
 
 #p4 .hint {
@@ -153,10 +165,9 @@ a {
 .page .icon {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 400px;
   right: 10%;
   left: 0;
-  width: 270px;
   height: 170px;
   margin: auto;
   text-align: center;
@@ -190,4 +201,3 @@ a {
   -o-transform: translateX(0) !important;
   transition-delay: 1s;
 }
-
