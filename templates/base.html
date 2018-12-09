@@ -10,59 +10,47 @@
     <div class="ct" id="t2">
       <div class="ct" id="t3">
         <div class="ct" id="t4">
-           <div class="ct" id="t5">
+          <div class="ct" id="t5">
 
             <ul id="menu">
-              <a href="#t1"><li class="fas fa-cog" id="uno"></li></a>
-              <a href="#t2"><li class="fas fa-id-card-alt" id="dos"></li></a>
-              <a href="#t3"><li class="fas fa-laptop-code" id="tres"></li></a>
-              <a href="#t4"><li class="fas fa-water" id="cuatro"></li></a>
-              <a href="#t5"><li class="fab fa-github" id="cinco"></li></a>
+              <a href="#t1"><li class="icon fa fa-cog" id="home"></li></a>
+              <a href="#t2"><li class="icon fa fa-id-card" id="exp"></li></a>
+              <a href="#t3"><li class="icon fa fa-code" id="coala"></li></a>
+              <a href="#t4"><li class="icon fa fa-edit" id="score"></li></a>
+              <a href="#t5"><li class="icon fa fa-code-fork" id="gits"></li></a>
             </ul>
 
             <div class="page" id="p1">
-               <section class="fas fa-cog">
-                 <span class="title">Welcome!</span>
-                 <span class="hint">
-                   {% block home %}
-                   {% endblock %}
-                 </span>
+               <section class="icon fa fa-cog">
+                 {% block home %}
+                 {% endblock %}
                </section>
             </div>
 
             <div class="page" id="p2">
-              <section class="fas fa-id-card-alt">
-                <span class="title">Experience</span>
-                <span class="hint">
-                  {% block experience %}
-                  {% endblock %}
-                </span>
+              <section class="icon fa fa-id-card">
+                {% block experience %}
+                {% endblock %}
               </section>
             </div>
 
             <div class="page" id="p3">
-              <section class="fas fa-laptop-code">
-                <span class="title">coala</span>
-                <span class="hint">
-                  {% block coala %}
-                  {% endblock %}
-                </span>
+              <section class="icon fa fa-code">
+                {% block coala %}
+                {% endblock %}
               </section>
            </div>
 
             <div class="page" id="p4">
-              <section class="fas fa-water">
-                <span class="title">SCoRE</span>
-                <p class="hint">
-                  {% block score %}
-                  {% endblock %}
-                </p>
+              <section class="icon fa fa-edit">
+                {% block score %}
+                {% endblock %}
               </section>
             </div>
 
             <div class="page" id="p5">
-              <section class="fab fa-github">
-                <span class="title">GitHub</span>
+              <section class="icon fa fa-code-fork">
+                <span class="title">My Git Profiles</span>
                 <p class="hint">
                   Check my GitHub at : https://github.com/siddhpant <br>
                   Check my GitLab at : https://gitlab.com/siddhpant <br>
@@ -72,15 +60,15 @@
               </section>
             </div>
 
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="js/index.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/animatedModal.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/animatedModal.js"></script>
 
 </body>
+
 </html>
