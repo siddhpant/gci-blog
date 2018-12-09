@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+{% block head %}
+{% endblock %}
+
+<body>
+
+  <div class="ct" id="t1">
+    <div class="ct" id="t2">
+      <div class="ct" id="t3">
+        <div class="ct" id="t4">
+           <div class="ct" id="t5">
+
+            <ul id="menu">
+              <a href="#t1"><li class="fas fa-cog" id="uno"></li></a>
+              <a href="#t2"><li class="fas fa-id-card-alt" id="dos"></li></a>
+              <a href="#t3"><li class="fas fa-laptop-code" id="tres"></li></a>
+              <a href="#t4"><li class="fas fa-water" id="cuatro"></li></a>
+              <a href="#t5"><li class="fab fa-github" id="cinco"></li></a>
+            </ul>
+
+            <div class="page" id="p1">
+               <section class="fas fa-cog">
+                 <span class="title">Welcome!</span>
+                 <span class="hint">
+                   {% block home %}
+                   {% endblock %}
+                 </span>
+               </section>
+            </div>
+
+            <div class="page" id="p2">
+              <section class="fas fa-id-card-alt">
+                <span class="title">Experience</span>
+                <span class="hint">
+                  {% block experience %}
+                  {% endblock %}
+                </span>
+              </section>
+            </div>
+
+            <div class="page" id="p3">
+              <section class="fas fa-laptop-code">
+                <span class="title">coala</span>
+                <span class="hint">
+                  {% block coala %}
+                  {% endblock %}
+                </span>
+              </section>
+           </div>
+
+            <div class="page" id="p4">
+              <section class="fas fa-water">
+                <span class="title">SCoRE</span>
+                <p class="hint">
+                  {% block score %}
+                  {% endblock %}
+                </p>
+              </section>
+            </div>
+
+            <div class="page" id="p5">
+              <section class="fab fa-github">
+                <span class="title">GitHub</span>
+                <p class="hint">
+                  Check my GitHub at : https://github.com/siddhpant <br>
+                  Check my GitLab at : https://gitlab.com/siddhpant <br>
+                  <br>
+                  Check out the repo of this website at: https://github.com/siddhpant/gci-blog
+                </p>
+              </section>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/animatedModal.min.js"></script>
+
+</body>
+</html>
