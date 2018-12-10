@@ -1,3 +1,0 @@
-[build]
-  command = "python -c 'import fcntl; fcntl.fcntl(1, fcntl.F_SETFL, 0)' && statik -v"
-publish = "public"
