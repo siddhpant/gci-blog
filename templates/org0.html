@@ -20,5 +20,5 @@
 
 <span class="hint">
   {{ orgs[0].content}}
-  {% include "coala_tasks.html" %}
+  {% include "org0_tasks.html" with org = {{ orgs[0].name }} %}
 </span>
