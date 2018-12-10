@@ -1,7 +1,11 @@
+/*
+Copyright (c) 2018 by Kriszta (https://codepen.io/vajkri/pen/OPYqav)
+Used under MIT License
+Kriszta in turn has used codrops Nifty Modal, license available at https://tympanus.net/codrops/licensing/
+*/
 
 button {
   font-family: Simplifica;
-  text-align: left;
   display: block;
   margin: 5% auto 0;
   background: transparent;

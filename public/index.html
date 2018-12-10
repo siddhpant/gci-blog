@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>My GCI 2018 Journey | Siddh Raman Pant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <style>
+    /* Attributions in their respective files. */
+    /*
+Copyright (c) 2018 Alberto Hartzet (www.albertohartzet.com)
+Used under CC BY-NC-SA 4.0, available at (https://codepen.io/hrtzt/pen/NPZKRN)
+*/
+
+html, body, .page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -webkit-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -moz-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+  color: #fff;
+  overflow: hidden;
+}
+
+* {
+  font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+}
+
+@font-face {
+  font-family: 'Signika';
+  src:url('assets/fonts/Signika/Signika-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Simplifica';
+  src:url('assets/fonts/SIMPLIFICA/SIMPLIFICA-Typeface.ttf');
+}
+
+.page {
+  position: absolute;
+}
+
+#p1 {
+  left: 0;
+}
+
+#p2, #p3, #p4, #p5 {
+  left: 200%;
+}
+
+#p1 { background: darkslateblue; }
+#p2 { background: tomato; }
+#p3 { background: lightseagreen; }
+#p4 { background: deeppink; }
+#p5 { background: rebeccapurple; }
+
+#t2:target #p2,
+#t3:target #p3,
+#t4:target #p4,
+#t5:target #p5 {
+  transform: translateX(-190%);
+  -webkit-transform: translateX(-190%);
+  -moz-transform: translateX(-190%);
+  -o-transform: translateX(-190%);
+  transition-delay: .4s !important;
+}
+
+#t2:target #p1,
+#t3:target #p1,
+#t4:target #p1,
+#t5:target #p1{
+  background: black;
+}
+
+#t2:target #p1 .icon,
+#t3:target #p1 .icon,
+#t4:target #p1 .icon,
+#t5:target #p1 .icon {
+  -webkit-filter: blur(3px);
+}
+
+.icon {
+  color: #fff;
+  font-size: 32px;
+  display: block;
+}
+
+ul .icon:hover {
+  opacity: 0.5;
+}
+
+.page .icon .title {
+  line-height: 2;
+}
+
+#t2:target ul .icon,
+#t3:target ul .icon,
+#t4:target ul .icon,
+#t5:target ul .icon{
+  transform: scale(.6);
+  -webkit-transform: scale(.6);
+  -moz-transform: scale(.6);
+  -o-transform: scale(.6);
+  transition-delay: .25s;
+}
+
+#t2:target #dos,
+#t3:target #tres,
+#t4:target #cuatro,
+#t4:target #cinco {
+  transform: scale(1.2) !important;
+  -webkit-transform: scale(1.2) !important;
+  -moz-transform: scale(1.2) !important;
+  -o-transform: scale(1.2) !important;
+}
+
+ul {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 280px;
+  width: 10%;
+  padding: 0;
+  text-align: center;
+ }
+
+#menu .icon {
+  margin: 30px 0;
+  transition: all .5s ease-out !important;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title, .hint {
+  display: block;
+}
+
+.title {
+  font-family: Signika;
+  font-size: 50px;
+}
+
+.hint, .hint p, .hint li, .hint ul {
+  font-family: Simplifica;
+  font-size: 30px;
+}
+
+#p4 .hint {
+  display: inherit !important;
+}
+
+.hint a {
+  color: yellow;
+  transition: all 250ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+}
+
+.hint a:hover {
+  color: #FFF;
+}
+
+.line-trough {
+  text-decoration: line-through;
+}
+
+.page .icon {
+  position: absolute;
+  top: 0;
+  bottom: 400px;
+  right: 10%;
+  left: 0;
+  height: 170px;
+  margin: auto;
+  text-align: center;
+  font-size: 80px;
+  line-height: 1.3;
+  transform: translateX(360%);
+  -webkit-transform: translateX(360%);
+  -moz-transform: translateX(360%);
+  -o-transform: translateX(360%);
+  transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -webkit-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -moz-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+  -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
+}
+
+.page#p1 .icon {
+  height: 220px;
+}
+
+.page#p1 .icon {
+  transform: translateX(10%) !important;
+}
+
+#t2:target .page#p2 .icon,
+#t3:target .page#p3 .icon,
+#t4:target .page#p4 .icon,
+#t5:target .page#p5 .icon {
+  transform: translateX(0) !important;
+  -webkit-transform: translateX(0) !important;
+  -moz-transform: translateX(0) !important;
+  -o-transform: translateX(0) !important;
+  transition-delay: 1s;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+    /*
+Copyright (c) 2018 by Alico (https://codepen.io/alico/pen/bpLgOL)
+Used under MIT license.
+*/
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  width: 100px;
+  background: #FF5733;
+  font-size: 25px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  font-family: Simplifica;
+  text-align: center;
+}
+table td.l, table th.l {
+  font-family: Simplifica;
+  text-align: center;
+}
+table td.c, table th.c {
+  font-family: Simplifica;
+  text-align: center;
+}
+table td.r, table th.r {
+  font-family: Simplifica;
+  text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  table tbody tr td {
+    font-family: Simplifica;
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    font-family: Simplifica;
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Code";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Stock";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Cap";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Inch";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Box Type";
+  }
+}
+    
+button {
+  font-family: Simplifica;
+  display: block;
+  margin: 5% auto 0;
+  background: transparent;
+  border: 2px solid #444;
+  padding: 5px 10px;
+}
+
+button.md-close {
+  margin-top: 40px;
+}
+
+.md-modal {
+  margin: auto;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  right: 0;
+  width: 50%;
+  max-width: 630px;
+  min-width: 320px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.md-show {
+  visibility: visible;
+}
+
+.md-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(228, 240, 227, 0.8);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.md-effect-12 .md-content {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.md-show.md-effect-12 ~ .md-overlay {
+  background-color: #4cc1bb;
+}
+
+.md-effect-12 .md-content h3,
+.md-effect-12 .md-content {
+  background: #4cc1bb;
+}
+
+.md-show.md-effect-12 .md-content {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="ct" id="t1">
+    <div class="ct" id="t2">
+      <div class="ct" id="t3">
+        <div class="ct" id="t4">
+          <div class="ct" id="t5">
+
+            <ul id="menu">
+              <a href="#t1"><li class="icon fa fa-cog" id="uno"></li></a>
+              <a href="#t2"><li class="icon fa fa-id-card" id="dos"></li></a>
+              <a href="#t3"><li class="icon fa fa-code" id="tres"></li></a>
+              <a href="#t4"><li class="icon fa fa-water" id="cuatro"></li></a>
+              <a href="#t5"><li class="icon fa fa-code-branch" id="cinco"></li></a>
+            </ul>
+
+            <div class="page" id="p1">
+               <section class="icon fa fa-cog">
+                   <span class="title">Google Code-in 2018 Journey</span>
+  <span class="hint">
+    Hello there!
+    I'm Siddh, and in this website I've somewhat elucidated my experience of GCI 2018. <br>
+    The experience is listed task-wise, so open the different sections using the menu! <br>
+    I worked for two organizations: coala and SCoRE. <br>
+    <br>
+    I initially worked for SCoRE and did some tasks quickly as they were pretty beginner type. <br>
+    Later I stopped working for SCoRE as the tasks were similar, and everyone was doing the same thing, and the tasks got approved. <br>
+    Also, the mentors were not much active. <br>
+    <br>
+    So I did tasks of coala and found it good! The community is active, the repos are actively maintained, mentors were helpful, and you had to do actual work. <br>
+    Overall, my experience was pretty good!
+  </span>
+               </section>
+            </div>
+
+            <div class="page" id="p2">
+              <section class="icon fa fa-id-card">
+                <span class="title">Experience</span>
+<span class="hint">
+
+  <table id="Experience">
+
+    <thead>
+      <tr>
+        <th>Competition</th>
+        <th>Year</th>
+        <th>Rank</th>
+        <th>Tasks Completed</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        
+          <tr>
+          <td> Google Code-in </td>
+          <td> 2018 </td>
+          
+            <td> None </td>
+          
+          
+            <td> None </td>
+          
+          <td> Worked with coala </td>
+          </tr>
+        
+          <tr>
+          <td> Junior InCTF </td>
+          <td> 2018 </td>
+          
+            <td> 7 (For online round) </td>
+          
+          
+            <td> Almost all chall </td>
+          
+          <td> Qualified for on-site round </td>
+          </tr>
+        
+          <tr>
+          <td> Google Code-in </td>
+          <td> 2017 </td>
+          
+            <td> 3 </td>
+          
+          
+            <td> 21 </td>
+          
+          <td> Finalist with XWiki </td>
+          </tr>
+        
+          <tr>
+          <td> Junior InCTF </td>
+          <td> 2017 </td>
+          
+            <td> 3 </td>
+          
+          
+            <td> All chall except 1 </td>
+          
+          <td> Winner </td>
+          </tr>
+        
+          <tr>
+          <td> Junior InCTF </td>
+          <td> 2015 </td>
+          
+            <td> 35 </td>
+          
+          
+            <td> All chall except 1 </td>
+          
+          <td> Selected & invited for workshop </td>
+          </tr>
+        
+    </tbody>
+
+  </table>
+
+</span>
+              </section>
+            </div>
+
+            <div class="page" id="p3">
+              <!-- coala as of 10/12/2018 1535 hrs-->
+              <section class="icon fa fa-code">
+                <span class="title" style="line-height: 0.7;">
+  coala
+  <br>
+  <a href="https://coala.io/">
+    <i class="fas fa-globe" style="font-size: 20px;"></i>
+  </a>
+  <a href="https://codein.withgoogle.com/organizations/sustainable-computing-research-lab-score/">
+    <i class="fas fa-cog" style="font-size: 20px;"></i>
+  </a>
+  
+    
+      <a href="https://gitter.im/coala/gci">
+        <i class="fab fa-gitter" style="font-size: 20px;"></i>
+      </a>
+    
+  
+    
+      <a href="https://coala.zulipchat.com/">
+        <font size="5px">Ⓩ</font>
+      </a>
+    
+  
+  <br><br>
+</span>
+
+<span class="hint">
+  <p>coala provides a unified interface for linting and fixing code with a single configuration file, regardless of the programming languages used. Plugins may by native Python or wrap external linters.</p>
+  
+  
+    <button class="md-trigger" data-modal="modal-12">Task 1</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>coAST: Add a property to the languages schema</h3>
+        <div>
+            <p>In this coAST task, I had to add a new property to the coAST models/schema in order to have more generality and abstraction.</p>
+<p>I added a precision attribute, which is important for floating-point types. I earlier used this attribute without adding this in schema.</p>
+<p>The change was reflected in my open PRs about C and C#.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 3</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>username-availability: Issue #113: Detect real names</h3>
+        <div>
+            <p>In this task, I had to enforce a check if the username provided is not a real name, as using full real names for usernames is not a good idea.</p>
+<p>This was essentially a NLP task, so I had to lookup about NLTK which was new to me! So a new toolkit in my box. Made a python script</p>
+<p>And then I had to integrate it with the project, so some JavaScript and Jinja2 trickery took place.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 6</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>gh-board: Issue #114: Add link to PR /files tab</h3>
+        <div>
+            <p>Someone was raving on Zulip about codebase while doing this task and then abandoned the competition itself, so I took it up and did it!</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 10</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>coAST: Add a new language definition *not* supported by coala</h3>
+        <div>
+            <p>In this coAST task, I had to add a language definition which was not supported by coala. So I added x86 definition.</p>
+<p>I initially added both uppercase and lowercase keywords (since both work), but then static broke due to too many keywords. :-P</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 14</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>Roll your own final task</h3>
+        <div>
+            <p>This was the final task! In this, we can choose any medium or high difficulty issue to work on!</p>
+<p>TODO</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 15</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>pypi-mobans: Issue #6: Pipfile template for pipenv support</h3>
+        <div>
+            <p>In this task I had to make a pipfile template for pipenv support. This is better as users will run the versions of dependencies the developers of upstream support.</p>
+<p>I originally didn't add the dev-packages section, which was brought to notice via issue #58 later. I added it later (PR #62) along with an easier way to define the packages, directly in the YAML file.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 17</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>Create a statik blog about your GCI journey</h3>
+        <div>
+            <p>This was one of the two final tasks. In this, I had to create a blog using statik about my GCI 2018 journey.</p>
+<p>You're currently looking at my work!</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 18</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>username-availability: Issue #120: If user name is available, take user to the Sign Up page</h3>
+        <div>
+            <p>This was probably my first coala task. I had to add links to the signup page of the websites where a username is available. The links had to be "clickable". </p>
+<p>I also did some link-refining to avoid web-security loopholes.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+
+<div class="md-overlay"></div>
+</span>
+              </section>
+           </div>
+
+            <div class="page" id="p4">
+              <!-- SCoRe as of 10/12/2018 1536 hrs-->
+              <section class="icon fa fa-water">
+                <span class="title" style="line-height: 0.7;">
+  Sustainable Computing Research Lab (SCoRe)
+  <br>
+  <a href="https://coala.io/">
+    <i class="fas fa-globe" style="font-size: 20px;"></i>
+  </a>
+  <a href="https://codein.withgoogle.com/organizations/coala/">
+    <i class="fas fa-cog" style="font-size: 20px;"></i>
+  </a>
+  
+  <br><br>
+</span>
+
+<span class="hint">
+  
+  
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 2</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[Git] Getting Started - Create a New Repository.</h3>
+        <div>
+            <p>My first GCI 2018 task!</p>
+<p>In this task I had to create an new empty repo by the name of GCI18-NewRepo.</p>
+<p>(The repo is now deleted as it was anyways empty and not looked after approval. Later, I stopped doing tasks for SCoRe.)</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 4</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[SCoRe Lab Website ] Add Github Link and Facebook Link at the footer of www.scorelab.org</h3>
+        <div>
+            <p>In this task, I had to provide links of SCoRe's GitHub and Facebbok pages for footers on their website.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 5</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[OpenSNA] Fork and Clone OpenSNA</h3>
+        <div>
+            <p>In this task, I had to fork the OpenSNA repo and clone it on my machine and send screenshots of the procedure.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 7</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[Git] Getting started with Git 2 : Feature Branches</h3>
+        <div>
+            <p>In this task, I had to make a branch using git, edit CONTRIBUTERS.MD, and open a PR.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 8</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[Go-social] Submit an issue</h3>
+        <div>
+            <p>In this task I had to submit an issue for the Go-social project.</p>
+<p>I tried hard to build and run the Go-social app, but it has outdated code due to which build was straight up refused, no matter what.</p>
+<p>Then I realised the outdated code itself is an issue. :-P</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 9</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[Kute] Run Kute App</h3>
+        <div>
+            <p>In this task I had to run kute Android app after building from the repo.</p>
+<p>This was a difficult task as the repository is no longer maintained, and thus I had to resort to many hacks to build it. Had to Google hard.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 11</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[GoCloud] Remove unnecessary line breaks from code in the GoCloud repository.</h3>
+        <div>
+            <p>The title is self-descriptive.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 13</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[OpenSNA] Submit an issue</h3>
+        <div>
+            <p>In this task, I had to create an issue for OpenSNA project.</p>
+<p>There was no documentation, it was Python3 incompatible and also I couldn't run it. Made an issue about it.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+    <button class="md-trigger" data-modal="modal-12">Task 16</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>[CLocal GCP] Remove redundant comments</h3>
+        <div>
+            <p>In this task, I had to remove redundant comments from one file of CLocal GCP's codebase.</p>
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+
+<div class="md-overlay"></div>
+</span>
+              </section>
+            </div>
+
+            <div class="page" id="p5">
+              <section class="icon fa fa-code-branch">
+                <span class="title">My Git Profiles</span>
+                <p class="hint">
+                  Check my GitHub at : https://github.com/siddhpant <br>
+                  Check my GitLab at : https://gitlab.com/siddhpant <br>
+                  <br>
+                  Check out the repo of this website at: https://github.com/siddhpant/gci-blog
+                </p>
+              </section>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="assets/js/index.js"></script>
+
+
+</body>
+
+</html>
