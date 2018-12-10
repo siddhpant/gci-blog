@@ -2,6 +2,7 @@
 task: "Create a statik blog about your GCI journey"
 org: coala
 mentors:
+  - li-boxuan
   - jayvdb
 ---
 

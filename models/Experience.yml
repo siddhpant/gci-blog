@@ -1,5 +1,5 @@
 competition: String
 year: Integer
-rank: Integer
-tasks_completed: Integer
+rank: String
+tasks_completed: String
 result: String

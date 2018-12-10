@@ -1,6 +1,38 @@
 <span class="title">Experience</span>
-  <span class="hint">
-    {% for experience in exp %}
-      {{experience}}
-    {% endfor %}
-  </span>
+<span class="hint">
+
+  <table id="Experience">
+
+    <thead>
+      <tr>
+        <th>Competition</th>
+        <th>Year</th>
+        <th>Rank</th>
+        <th>Tasks Completed</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        {% for experience in exp | sort(attribute='year', reverse = True) %}
+          <tr>
+          <td> {{ experience.competition }} </td>
+          <td> {{ experience.year }} </td>
+          {% if experience.rank is defined %}
+            <td> {{ experience.rank }} </td>
+          {% else %}
+            <td> - </td>
+          {% endif %}
+          {% if experience.tasks_completed is defined %}
+            <td> {{ experience.tasks_completed }} </td>
+          {% else %}
+            <td> - </td>
+          {% endif %}
+          <td> {{ experience.result }} </td>
+          </tr>
+        {% endfor %}
+    </tbody>
+
+  </table>
+
+</span>

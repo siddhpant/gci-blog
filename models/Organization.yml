@@ -2,3 +2,4 @@ name: String
 website: String
 gci_page: String
 chat: Chatroom[]
+content: Content
