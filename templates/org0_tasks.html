@@ -1,1 +1,19 @@
-i
+{% for task in tasks %}
+  {% if task.org == orgs[0] %}
+    
+    {% if task[loop.counter] != task[loop.counter - 1] %}
+    <button class="md-trigger" data-modal="modal-12">Task {{loop.counter}}</button>
+    <div class="md-modal md-effect-12">
+    <div class="md-content">
+        <h3>{{task.task}}</h3>
+        <div>
+            {{task.content}}
+          <button class="md-close">Close</button>
+        </div>
+    </div>
+</div>
+
+<div class="md-overlay"></div>
+  {% endif %}
+  {% endif %}
+{% endfor %}

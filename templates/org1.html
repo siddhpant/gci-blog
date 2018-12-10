@@ -1,6 +1,24 @@
-<span class="title">
-  {{ orgs[1].name }}
+<span class="title" style="line-height: 0.7;">
+  {{ orgs[0].name }}
+  <br>
+  <a href="{{ orgs[0].website }}">
+    <i class="fas fa-globe" style="font-size: 20px;"></i>
+  </a>
+  {% for chat in orgs[0].chat %}
+    {% if chat.client == 'Zulip' %}
+      <a href="{{ chat.chatroom }}">
+        <font size="5px">Ⓩ</font>
+      </a>
+    {% elif chat.client == 'Gitter' %}
+      <a href="{{ chat.chatroom }}">
+        <i class="fab fa-gitter" style="font-size: 20px;"></i>
+      </a>
+    {% endif %}
+  {% endfor %}
+  <br><br>
 </span>
 
 <span class="hint">
+  {{ orgs[0].content }}
+  {% include "org0_tasks.html" %}
 </span>

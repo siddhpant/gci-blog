@@ -142,7 +142,7 @@ a {
   font-size: 50px;
 }
 
-.hint, .hint p {
+.hint, .hint p, .hint li, .hint ul {
   font-family: Simplifica;
   font-size: 30px;
 }
