@@ -4,6 +4,9 @@
   <a href="{{ orgs[0].website }}">
     <i class="fas fa-globe" style="font-size: 20px;"></i>
   </a>
+  <a href="{{ orgs[1].gci_page }}">
+    <i class="fas fa-cog" style="font-size: 20px;"></i>
+  </a>
   {% for chat in orgs[0].chat %}
     {% if chat.client == 'Zulip' %}
       <a href="{{ chat.chatroom }}">

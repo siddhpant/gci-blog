@@ -1,10 +1,13 @@
 <span class="title" style="line-height: 0.7;">
-  {{ orgs[0].name }}
+  {{ orgs[1].name }}
   <br>
   <a href="{{ orgs[0].website }}">
     <i class="fas fa-globe" style="font-size: 20px;"></i>
   </a>
-  {% for chat in orgs[0].chat %}
+  <a href="{{ orgs[0].gci_page }}">
+    <i class="fas fa-cog" style="font-size: 20px;"></i>
+  </a>
+  {% for chat in orgs[1].chat %}
     {% if chat.client == 'Zulip' %}
       <a href="{{ chat.chatroom }}">
         <font size="5px">Ⓩ</font>
@@ -19,6 +22,6 @@
 </span>
 
 <span class="hint">
-  {{ orgs[0].content }}
-  {% include "org0_tasks.html" %}
+  {{ orgs[1].content }}
+  {% include "org1_tasks.html" %}
 </span>
